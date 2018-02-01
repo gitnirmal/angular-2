@@ -1,0 +1,6 @@
+<p class="text-danger">Child - Test Component</p>
+<p>From parent : {{masterName}}</p>
+
+Vote sends to parent component:
+<button class="btn btn-sm btn-success" (click)="doVote(true)" [disabled]="voted">Agree</button>
+<button class="btn btn-sm btn-danger" (click)="doVote(false)" [disabled]="voted">Disagree</button>

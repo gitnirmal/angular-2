@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p class="text-primary">Parent - Home Component</p>
+        <p>To child : {{master}}</p>
+
+        Vote from child component:
+        <ul class="list-unstyled">
+            <li>Agree {{agreed}}</li>
+            <li>Disagree {{disagreed}}</li>
+        </ul>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <test-app [master]="master" (onVoted)="onVoted($event)"></test-app>
+            </div>
+        </div>
+    </div>
+</div>
