@@ -1,12 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <p class="text-primary">Parent - Home Component</p>
+        Parent Value: <input type="text" [(ngModel)]="master">
         <p>To child : {{master}}</p>
 
         Vote from child component:
-        <ul class="list-unstyled">
-            <li>Agree {{agreed}}</li>
-            <li>Disagree {{disagreed}}</li>
+        <ul class="list-inline">
+            <li>Agree - {{agreed}}</li>
+            <li>Disagree - {{disagreed}}</li>
         </ul>
 
         <div class="panel panel-default">

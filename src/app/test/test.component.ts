@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges } from '@angular/core';
 
 @Component({
     selector:'test-app',
     templateUrl:'./test.component.html'
 })
 
-export class TestComponent implements OnInit{
+export class TestComponent implements OnInit, OnChanges{
 
     private voted:boolean = false;
     @Input('master') masterName: string;
@@ -18,6 +18,15 @@ export class TestComponent implements OnInit{
 
     ngOnInit(){
 
+    }
+
+    ngOnChanges(changes:SimpleChanges){
+        for (let propName in changes) {
+            let chng = changes[propName];
+            let cur  = JSON.stringify(chng.currentValue);
+            let prev = JSON.stringify(chng.previousValue);
+            console.log(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
+        }
     }
 
     doVote(vote:boolean){
