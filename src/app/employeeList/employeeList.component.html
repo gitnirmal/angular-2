@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>
+                <a [routerLink]="['/employee', employee.id]">{{employee.id}}</a>
+            </td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.phone}}</td>
+        </tr>
+        <tr *ngIf="!employees">
+            <td>{{status}}</td>
+        </tr>
+    </tbody>
+</table>

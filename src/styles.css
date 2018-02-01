@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    padding:10px 0;
+}
+.main{
+    padding:20px 0;
+}
+.employee{
+    margin-top: 15px;
+}

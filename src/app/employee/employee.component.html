@@ -1,0 +1,26 @@
+<a routerLink="/employee">Back to Employee List</a>
+<div *ngIf="employee">
+    <div class="panel panel-default employee">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{'#'+employee.id}} - {{employee.name}}</h3>
+        </div>
+        <div class="panel-body">
+            <dl class="dl-horizontal">
+                <dt>Email:</dt>
+                <dd>{{employee.email}}</dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Phone:</dt>
+                <dd>{{employee.phone}}</dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Address:</dt>
+                <dd>{{employee.address.suite}} {{employee.address.street}}
+                    <br/> {{employee.address.city}} {{employee.address.zipcode}}</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div *ngIf="!employee">
+    {{status}}
+</div>
