@@ -12,9 +12,9 @@
             <td>
                 <a [routerLink]="['/employee', employee.id]">{{employee.id}}</a>
             </td>
-            <td>{{employee.name}}</td>
-            <td>{{employee.email}}</td>
-            <td>{{employee.phone}}</td>
+            <td>{{employee.name | uppercase}}</td>
+            <td>{{employee.email | emailPhoneFormator:'email'}}</td>
+            <td>{{employee.phone | emailPhoneFormator:'phone'}}</td>
         </tr>
         <tr *ngIf="!employees">
             <td>{{status}}</td>

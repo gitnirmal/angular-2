@@ -14,6 +14,7 @@ import { NoPageFoundComponent } from './noPageFound/noPageFound.component';
 import { TestComponent } from './test/test.component';
 
 import { EmployeeService } from './employeeList/employee.service';
+import { EmailPhoneFormatorPipe } from './employeeList/employee.pipe';
 
 const appRoute : Routes = [
   { path:'home', component:HomeComponent },
@@ -30,7 +31,8 @@ const appRoute : Routes = [
     EmployeeListComponent,
     EmployeeComponent,
     NoPageFoundComponent,
-    TestComponent
+    TestComponent,
+    EmailPhoneFormatorPipe
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute), HttpModule, FormsModule
