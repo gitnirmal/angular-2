@@ -24,3 +24,7 @@
 <div *ngIf="!employee">
     {{status}}
 </div>
+
+<button class="btn btn-primary" (click)="backToList()">Back to Employee List</button>
+
+<button class="btn btn-primary" (click)="unsubscribeCall()" *ngIf="!subs.closed">Cancel Request</button>
